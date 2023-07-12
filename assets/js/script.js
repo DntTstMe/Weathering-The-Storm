@@ -59,3 +59,14 @@ async function getWeather(cityName) {
         console.error(error);
     }
 }
+// Retrieves previously searched cities from localStorage
+function displayCity() {
+    const pastCitiesEl = document.querySelector("#search-history"); // Element for displaying past searched cities
+    searchHistory = JSON.parse(localStorage.getItem("city")) || [];
+    const cityList = searchHistory.map((city) => `<button class="btn btn-secondary my-2" type="submit">${city}</button>`);
+    pastCitiesEl.innerHTML = cityList;
+    const myDashTwo = document.querySelectorAll(".my-2");
+    myDashTwo.forEach((button) => {
+        button.addEventListener("click", () => getWeather(button.textContent));
+    });
+}
