@@ -70,3 +70,23 @@ function displayCity() {
         button.addEventListener("click", () => getWeather(button.textContent));
     });
 }
+// Initial display
+displayCity();
+displayTime();
+setInterval(displayTime, 1000);
+
+// Event listeners
+const searchForm = document.querySelector("#search-form"); // Button for searching weather
+searchForm.addEventListener("submit", dashboard);
+
+const clearHistory = document.querySelector("#clear-history-button"); // Button for clearing search history 
+clearHistory.addEventListener("click", clearSearchHistory);
+
+// CLears search history
+function clearSearchHistory() {
+    localStorage.removeItem("city");
+    const pastCitiesEl = document.querySelector("#search-history");
+    pastCitiesEl.innerHTML = "";
+    searchHistory = [];
+    displayCity(); // Update the displayed city list
+}
