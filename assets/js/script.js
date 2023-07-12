@@ -13,6 +13,7 @@ function displayTime() {
     const timeDisplayEl = document.querySelector("#time-display"); // Element for displaying time
     const rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
     timeDisplayEl.textContent = rightNow;
+}
     // Fetches current weather data and 5-day forecast data from OpenWeatherMap API
 async function getWeather(cityName) {
     const todaysWeather = document.querySelector("#present-day-weather"); // Element for displaying today's weather
