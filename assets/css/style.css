@@ -1,0 +1,72 @@
+/* Styles for search history */
+.search-history {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for the search button and clear history button */
+.search-button,
+#clear-history-button {
+  background-color: #36151E;
+  border-color: #36151E;
+}
+
+/* Styles for the clear history button text color */
+#clear-history-button {
+  color: #fff;
+}
+
+/* Styles for the 5-day forecast boxes */
+.day {
+  background: #36151E;
+  color: white;
+  list-style: none;
+  padding: 10px 20px;
+}
+
+/* Styles for the 5-day forecast section */
+.five-day-forecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Styles for the 5-day forecast header */
+.five-day-forecast-header {
+  padding: 20px 10px;
+  font-size: 2em;
+}
+
+/* Styles for the present day weather */
+.present-day-weather ul {
+  list-style: none;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Styles for the header section */
+header {
+  background: #36151E;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Media query for tablets - landscape and portrait */
+@media screen and (max-width: 1180px) {
+  .five-day-forecast {
+    flex-direction: column;
+  }
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 576px) {
+  .row.present-day-weather {
+    --bs-gutter-x: 0rem;
+    margin: 10px 0;
+  }
+  .present-day-weather ul {
+    margin: 10px 0;
+  }
+}
