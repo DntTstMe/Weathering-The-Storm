@@ -25,3 +25,38 @@
             </h2>
         </div>
     </header>
+      <!--Search form-->
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <form id="search-form">
+                    <label class="text-dark" for="input-city">Enter city location here:</label>
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search" id="input-city">
+                        <button class="btn btn-primary search-button" type="submit" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <!--Clear history button-->
+                <button class="btn btn-primary my-2" style="width: 100%" type="submit" id="clear-history-button">Clear History</button>
+                <hr>
+                <div class="search-history" id="search-history"></div>
+            </div>
+
+            <div class="col-md-9 col-12">
+                <!--Present Day Weather-->
+                <div class="row present-day-weather" id="present-day-weather"></div>
+                <!--Five Day Forecast Header-->
+                <div class="row five-day-forecast-header">5-Day Forecast:</div>
+                <!--Five Day Forecast-->
+                <div class="five-day-forecast" id="five-day-forecast"></div>
+            </div>
+        </div>
+    </main>
+    <!--External scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
